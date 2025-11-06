@@ -1,0 +1,222 @@
+/*
+====================================
+    Global Reset and Typography
+====================================
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Menggunakan font-family yang lebih aman jika Poppins tidak tersedia */
+    font-family: 'Poppins', sans-serif, Arial, sans-serif;
+}
+
+:root {
+    /* Define Color Variables */
+    --clr-dark: #0b1320; /* Background Utama */
+    --clr-card: #162233; /* Background Card */
+    --clr-primary: #00c6ff; /* Warna Aksen / Biru Cerah */
+    --clr-primary-shadow: rgba(0, 198, 255, 0.2);
+    --clr-text-light: #fff;
+    --clr-link-hover: #00bfff;
+    --clr-total: #00ffea;
+}
+
+body {
+    background-color: var(--clr-dark);
+    color: var(--clr-text-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px; /* Batasi lebar container */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*
+====================================
+            Navbar Styles
+====================================
+*/
+.navbar {
+    background-color: var(--clr-dark);
+    border-bottom: 2px solid var(--clr-total); /* Menggunakan warna total untuk border */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--clr-primary);
+    font-weight: 700;
+    font-size: 1.5rem; /* Ukuran logo lebih besar */
+}
+
+nav a {
+    color: var(--clr-primary);
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 15px;
+    border: 1px solid var(--clr-primary);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--clr-primary);
+    color: var(--clr-dark);
+    box-shadow: 0 0 15px var(--clr-primary);
+}
+
+/*
+====================================
+        Pesanan Section
+====================================
+*/
+.pesanan {
+    padding: 80px 10px;
+    text-align: center;
+}
+
+.pesanan h2 {
+    color: var(--clr-primary);
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+}
+
+/* ===== Order Card Container ===== */
+.order-card {
+    background-color: var(--clr-card);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px var(--clr-primary-shadow);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left; /* Atur teks di dalam card ke kiri */
+}
+
+.order-card h3 {
+    color: var(--clr-primary);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 2px solid var(--clr-primary-shadow);
+    padding-bottom: 10px;
+}
+
+/* ===== List Pesanan Styles ===== */
+.order-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+/* Perbaikan: Menerapkan border-bottom di setiap pesanan */
+.order-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0; /* Tambah padding vertikal */
+    border-bottom: 1px dashed var(--clr-primary-shadow); /* Garis putus-putus */
+    font-size: 1rem;
+}
+
+.order-list li:last-child {
+    border-bottom: none; /* Hilangkan border di item terakhir */
+}
+
+/* Styles for the items within the list */
+.order-list span {
+    /* Reset gaya span untuk kejelasan */
+    color: var(--clr-text-light);
+    font-weight: 400; 
+}
+
+.order-list .quantity {
+    font-weight: 700; /* Kuantitas lebih tebal */
+    color: var(--clr-primary);
+    margin-left: 10px;
+}
+
+.order-list .subtotal {
+    font-weight: 700; /* Harga subtotal lebih tebal */
+    color: var(--clr-total);
+}
+
+/* Jika belum ada pesanan */
+.order-list p {
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* ===== Total Harga Styles ===== */
+.total {
+    border-top: 2px solid var(--clr-primary);
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.total-amount {
+    color: var(--clr-total);
+}
+
+.total-label {
+    color: var(--clr-primary);
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+
+/* ===== Clear Button Styles ===== */
+.clear-btn {
+    background-color: var(--clr-primary);
+    color: var(--clr-dark);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 30px auto 0;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.clear-btn:hover {
+    background-color: var(--clr-link-hover);
+    box-shadow: 0 0 18px var(--clr-primary);
+}
+
+
+/*
+====================================
+            Footer
+====================================
+*/
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--clr-primary-shadow);
+    margin-top: 40px;
+}
+
+.copy {
+    color: #888;
+    font-size: 0.9rem;
+}

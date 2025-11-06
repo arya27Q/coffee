@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Pesanan - Forever Cop %</title>
+  <link rel="stylesheet" href="/css/pesanan.css">
+  </head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">☕ Forever Cop %</div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="menu.html">Menu</a>
+        <a href="pesanan.html" class="active">Pesanan</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="pesanan">
+    <h2>Daftar Pesanan Anda</h2>
+
+    <div class="order-card" id="order-list-card">
+      <h3>Detail Pesanan</h3>
+      <ul id="order-list" class="order-list">
+        </ul>
+      
+      <div id="total-price" class="total"></div>
+      
+      <button class="clear-btn" onclick="clearOrders()">Kosongkan Pesanan</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="copy">© 2024 Forever Cop %. All rights reserved.</p>
+  </footer>
+
+<script>
+// Fungsi untuk memformat angka menjadi format Rupiah
+const formatRupiah = (number) => {
+    return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        minimumFractionDigits: 0
+    }).format(number);
+};
+
+// Ambil elemen DOM
+let orders = JSON.parse(localStorage.getItem('orders')) || [];
+const orderList = document.getElementById('order-list');
+const totalPriceDiv = document.getElementById('total-price');
+
+function renderOrders() {
+  // Kosongkan daftar sebelum merender ulang
+  orderList.innerHTML = ""; 
+  
+  if (orders.length === 0) {
+    orderList.innerHTML = "<p>Belum ada pesanan.</p>";
+    totalPriceDiv.innerHTML = "";
+    return;
+  }
+
+  let total = 0;
+  
+  orders.forEach(item => {
+    // Hitung subtotal untuk item ini
+    const itemTotal = item.price * item.quantity;
+    total += itemTotal; // Tambahkan ke total keseluruhan
+
+    // Buat elemen <li> baru untuk setiap item
+    const listItem = document.createElement('li');
+    listItem.innerHTML = `
+      <span>${item.name}</span>
+      <span class="quantity">x${item.quantity}</span> 
+      <span class="subtotal">${formatRupiah(itemTotal)}</span>
+    `;
+    orderList.appendChild(listItem);
+  });
+
+  // Tampilkan total harga
+  totalPriceDiv.innerHTML = `
+    <h3 class="total-label">Total Keseluruhan:</h3>
+    <span class="total-amount">${formatRupiah(total)}</span>
+  `;
+}
+
+function clearOrders() {
+  // Konfirmasi sebelum menghapus
+  if (!confirm("Apakah Anda yakin ingin mengosongkan semua pesanan?")) {
+      return;
+  }
+  
+  localStorage.removeItem('orders');
+  orders = []; // Reset variabel orders
+  renderOrders(); // Render ulang tampilan
+  alert("Daftar pesanan telah dikosongkan.");
+}
+
+// Render saat pertama kali load
+renderOrders();
+</script>
+
+</body>
+</html>

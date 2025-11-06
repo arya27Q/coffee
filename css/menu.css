@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0b1320;
+  color: #fff;
+}
+
+.navbar {
+  background-color: #0b1320;
+  border-bottom: 2px solid #00eeff;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;;
+}
+
+.logo {
+  color: #00f2ff;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+nav a {
+  color: #00ddff;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: 0.3s;
+  border: 1px solid #00c6ff;
+  padding: 8px 12px;
+  border-radius: 18px;
+}
+
+nav a:hover {
+   background-color: #00c6ff;
+  color: #0b1320;
+  box-shadow: 0 0 15px #00c6ff;
+
+}
+
+.login-btn {
+  background: transparent;
+  border: 1px solid #00c6ff;
+  color: #00c6ff;
+  border-radius: 25px;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #00c6ff;
+  color: #0b1320;
+  box-shadow: 0 0 15px #00c6ff;
+}
+
+.background {
+  height: 90vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.647), rgba(0,0,0,0.6)),
+    url('/img/pexels-chevanon-324028.jpg');
+  background-blend-mode: darken;
+  background-size: cover;      
+  background-position: center;  
+  background-repeat: no-repeat; 
+ border-bottom: 2px solid #00eeff;
+}
+.background h1 {     
+  font-size: 5rem;   
+  margin-bottom: 24px; 
+  display: inline-block;
+  transition: 0.3s;
+  animation: zoomIn 1.2s ease forwards;
+}
+.menu {
+  text-align: center;
+  padding: 60px 10%;
+  margin-bottom: 1rem;
+}
+
+.menu h2 {
+  color: #00c6ff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+/* Pastikan class ini ada di CSS agar filter berfungsi */
+.hidden {
+    display: none !important; 
+    /* Gunakan !important jika ada gaya lain yang menimpanya */
+}
+
+/* Tambahkan juga gaya untuk menu-grid agar itemnya tampil berjejer */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 30px 0;
+    margin-top: 20px;
+    text-align: center; /* Untuk menengahkan konten */
+}
+
+/* Styling Card */
+.menu-grid .card {
+    background-color: #162233; /* Warna gelap untuk card */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #00c6ff55; /* Border aksen */
+}
+
+.menu-grid .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Styling Tombol Filter */
+.menu-category {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-category button {
+    padding: 10px 20px;
+    border: 1px solid #00c6ff;
+    background-color: transparent;
+    color: #00c6ff;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.menu-category button.active {
+    background-color: #00c6ff;
+    color: #0b1320;
+    box-shadow: 0 0 15px #00c6ff;
+}
+.card {
+  background-color: #162233;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgb(0, 200, 255);
+}
+
+.card img {
+  width: 100%;        
+  height: 180px;      
+  object-fit: cover;  
+  border-radius: 12px; 
+  margin-bottom: 15px; 
+  transition: transform 0.3s ease;
+}
+
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.card p {
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.card span {
+  color: #00c6ff;
+  font-weight: bold;
+}
+
+.add-btn {
+  background-color: #00c6ff;
+  color: #0b1320;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  box-shadow: 0 0 15px #00c6ff;
+}
+
+.footer {
+  background-color: #0b1320;
+  padding: 60px 10% 30px;
+  border-top: 1px solid #14263a;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.footer h3, .footer h4 {
+  color: #00c6ff;
+  margin-bottom: 10px;
+}
+
+.footer a, .footer p {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer a:hover {
+  color: #00c6ff;
+  text-shadow: 0 0 8px #00c6ff;
+}
+
+.copy {
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+}

@@ -10,6 +10,7 @@ body {
   color: #fff;
 }
 
+
 .navbar {
   background-color: #0b1320;
   border-bottom: 2px solid #00eeff;
@@ -22,7 +23,7 @@ body {
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;;
+  align-items: center;
 }
 
 .logo {
@@ -42,10 +43,9 @@ nav a {
 }
 
 nav a:hover {
-   background-color: #00c6ff;
+  background-color: #00c6ff;
   color: #0b1320;
   box-shadow: 0 0 15px #00c6ff;
-
 }
 
 .login-btn {
@@ -64,12 +64,13 @@ nav a:hover {
   box-shadow: 0 0 15px #00c6ff;
 }
 
+
 .hero {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 200px 30px
-
+  padding: 200px 30px;
+ 
 }
 
 .hero-text h1 {
@@ -107,6 +108,114 @@ nav a:hover {
   box-shadow: 0 0 30px rgb(0, 200, 255);
 }
 
+
+.testimonials {
+  text-align: center;
+  padding: 60px 10%;
+  background-color: #0b1320;
+}
+
+.testimonials h2 {
+  color: #00c6ff;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.testimonial-card {
+  background-color: #162233;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,198,255,0.2);
+  transition: 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgb(0, 200, 255);
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid #00c6ff;
+}
+
+.testimonial-card h3 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.testimonial-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+.testimonial-card .rating {
+  color: #ffd700;
+  margin: 5px 0;
+}
+
+/* GALLERY */
+.gallery {
+  text-align: center;
+  padding: 60px 10%;
+  background-color: #0b1320;
+}
+
+.gallery h2 {
+  color: #00c6ff;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,198,255,0.2);
+  transition: 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0,198,255,0.3);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-item p {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* FOOTER */
 .footer {
   background-color: #0b1320;
   padding: 60px 10% 30px;
