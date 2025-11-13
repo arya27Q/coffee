@@ -105,8 +105,9 @@ nav a:hover, nav a.active {
 }
 
 .about-img img {
-  width: 100%;
-  max-width: 500px;
+  width: 250%;
+  max-width: 550px;
+  margin-left: 6rem;
   border-radius: 20px;
   box-shadow: 0 0 25px rgba(0, 198, 255, 0.4);
   transition: transform 0.3s ease;
