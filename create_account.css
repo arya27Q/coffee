@@ -1,0 +1,101 @@
+.auth-form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; 
+  padding: 50px 20px;
+}
+
+.auth-card {
+  background-color: #162233;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 198, 255, 0.15); 
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-card h2 {
+  color: #00c6ff;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #fff;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #00c6ff;
+  border-radius: 8px;
+  background-color: #0b1320;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00c6ff;
+  border-color: #00eeff;
+}
+
+.password-note {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.1);
+  accent-color: #00c6ff;
+}
+
+.checkbox-group label {
+  display: inline;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.checkbox-group a {
+  color: #00c6ff;
+  text-decoration: none;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px 25px;
+  font-size: 1rem;
+}
+
+.switch-auth {
+  margin-top: 20px;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.switch-auth a {
+  color: #00c6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
