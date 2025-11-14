@@ -59,7 +59,7 @@ nav a:hover {
    BACKGROUND SECTION
 ====================================== */
 .background {
-  height: 90vh;
+  height: 55vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
