@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0b1320;
+  color: #fff;
+}
+
+/* ======================================
+   NAVBAR
+====================================== */
+.navbar {
+  background-color: #0b1320;
+  border-bottom: 2px solid #00eeff;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #00f2ff;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+nav a {
+  color: #00ddff;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: 0.3s;
+  border: 1px solid #00c6ff;
+  padding: 8px 12px;
+  border-radius: 18px;
+}
+
+nav a:hover {
+  background-color: #00c6ff;
+  color: #0b1320;
+  box-shadow: 0 0 15px #00c6ff;
+}
+.background {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.647), rgba(0,0,0,0.6)),
+    url('/img/pexels-chevanon-324028.jpg');
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid #00eeff;
+}
+
+
+
+.promo-section {
+  padding: 80px 10%;
+  background-color: #0b1320; /* Latar belakang biru tua */
+  text-align: center;
+}
+
+.promo-section h2 {
+  color: #00c6ff; /* Biru Neon */
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.promo-subtitle {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* --- Tombol Filter --- */
+.filter-buttons {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.filter-btn {
+  background-color: #162233;
+  color: #fff;
+  border: 2px solid #162233;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #00c6ff;
+  border-color: #00c6ff;
+  color: #0b1320;
+}
+
+.filter-btn.active {
+  background-color: #00c6ff;
+  border-color: #00c6ff;
+  color: #0b1320;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.5);
+}
+
+/* --- Grid Kartu Promo --- */
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.promo-card {
+  background-color: #ffffff; /* Kartu warna putih */
+  color: #333; /* Teks gelap di dalam kartu */
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Latar belakang ikon di dalam kartu */
+.card-icon-bg {
+  width: 100px;
+  height: 100px;
+  background-color: #0b1320; /* Biru tua, sama dgn bg section */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px auto;
+}
+
+.card-icon-bg i {
+  color: #00c6ff; /* Ikon warna biru neon */
+  font-size: 3rem;
+}
+
+.promo-card h4 {
+  font-size: 1.4rem;
+  color: #0b1320;
+  margin-bottom: 10px;
+}
+
+.promo-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Tombol di dalam kartu */
+.promo-btn {
+  display: inline-block;
+  background-color: #007bff; /* Biru primer (sesuai gambar) */
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.promo-btn:hover {
+  background-color: #0056b3;
+}

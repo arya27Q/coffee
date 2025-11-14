@@ -1,0 +1,125 @@
+.delivery-hero {
+  text-align: center;
+  padding: 120px 10%;
+  background-color: #0b1320;
+  margin-bottom: 1rem;
+}
+.delivery-hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delivery-hero h1 {
+  color: #00c6ff;
+  font-size: 3rem;
+  margin-bottom: 35px;
+}
+
+.delivery-hero p {
+  color: #ccc;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.hero-order-btn {
+  font-size: 1.1rem;
+  padding: 15px 35px;
+}
+
+.how-to-order {
+  padding: 80px 10%;
+  background-color: #111a27;
+  text-align: center;
+}
+.how-to-order .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.how-to-order h2 {
+  color: #00f2ff;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.steps-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.step-item {
+  background-color: #162233;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.1);
+  transition: transform 0.3s;
+}
+
+.step-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.3);
+}
+
+.step-item i {
+  color: #00c6ff;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.step-item h4 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.step-item p {
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.delivery-partners {
+  padding: 60px 10%;
+  text-align: center;
+}
+.delivery-partners .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delivery-partners h2 {
+  color: #00c6ff;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.partners-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.partners-list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.partner-card {
+  background-color: #162233;
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #fff;
+  border: 2px solid #162233;
+  transition: 0.3s;
+}
+
+.partner-card:hover {
+  color: #00c6ff;
+  border-color: #00c6ff;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.5);
+}

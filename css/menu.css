@@ -1,3 +1,6 @@
+/* ======================================
+   GLOBAL STYLES
+====================================== */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +13,9 @@ body {
   color: #fff;
 }
 
+/* ======================================
+   NAVBAR
+====================================== */
 .navbar {
   background-color: #0b1320;
   border-bottom: 2px solid #00eeff;
@@ -22,7 +28,7 @@ body {
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;;
+  align-items: center;
 }
 
 .logo {
@@ -42,12 +48,42 @@ nav a {
 }
 
 nav a:hover {
-   background-color: #00c6ff;
+  background-color: #00c6ff;
   color: #0b1320;
   box-shadow: 0 0 15px #00c6ff;
-
 }
 
+
+
+/* ======================================
+   BACKGROUND SECTION
+====================================== */
+.background {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.647), rgba(0,0,0,0.6)),
+    url('/img/pexels-chevanon-324028.jpg');
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid #00eeff;
+}
+
+.background h1 {
+  font-size: 5rem;
+  margin-bottom: 24px;
+  display: inline-block;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: 0.3s;
+  animation: zoomIn 1.2s ease forwards;
+}
 .login-btn {
   background: transparent;
   border: 1px solid #00c6ff;
@@ -63,33 +99,6 @@ nav a:hover {
   color: #0b1320;
   box-shadow: 0 0 15px #00c6ff;
 }
-
-.background {
-  height: 90vh;
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.647), rgba(0,0,0,0.6)),
-    url('/img/pexels-chevanon-324028.jpg');
-  background-blend-mode: darken;
-  background-size: cover;      
-  background-position: center;  
-  background-repeat: no-repeat; 
- border-bottom: 2px solid #00eeff;
-}
-.background h1 {     
-  font-size: 5rem;   
-  margin-bottom: 24px; 
-  display: inline-block;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  transition: 0.3s;
-  animation: zoomIn 1.2s ease forwards;
-}
 .menu {
   text-align: center;
   padding: 60px 10%;
@@ -102,71 +111,54 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-
-
-
-
-/* Pastikan class ini ada di CSS agar filter berfungsi */
 .hidden {
-    display: none !important; 
-    /* Gunakan !important jika ada gaya lain yang menimpanya */
+  display: none !important;
 }
 
-/* Tambahkan juga gaya untuk menu-grid agar itemnya tampil berjejer */
 .menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 30px 0;
-    margin-top: 20px;
-    text-align: center; /* Untuk menengahkan konten */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 30px 0;
+  margin-top: 20px;
+  text-align: center;
 }
 
-/* Styling Card */
-.menu-grid .card {
-    background-color: #162233; /* Warna gelap untuk card */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border: 1px solid #00c6ff55; /* Border aksen */
-}
-
-.menu-grid .card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-/* Styling Tombol Filter */
+/* ======================================
+   MENU CATEGORY BUTTONS
+====================================== */
 .menu-category {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .menu-category button {
-    padding: 10px 20px;
-    border: 1px solid #00c6ff;
-    background-color: transparent;
-    color: #00c6ff;
-    cursor: pointer;
-    border-radius: 25px;
-    transition: all 0.3s;
-    margin: 0 10px;
-    font-weight: 600;
+  padding: 10px 20px;
+  border: 1px solid #00c6ff;
+  background-color: transparent;
+  color: #00c6ff;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s;
+  margin: 0 10px;
+  font-weight: 600;
 }
 
 .menu-category button.active {
-    background-color: #00c6ff;
-    color: #0b1320;
-    box-shadow: 0 0 15px #00c6ff;
+  background-color: #00c6ff;
+  color: #0b1320;
+  box-shadow: 0 0 15px #00c6ff;
 }
-.card {
+
+/* ======================================
+   CARD STYLING
+====================================== */
+.menu-grid .card {
   background-color: #162233;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid #00c6ff55;
   transition: 0.3s;
 }
 
@@ -176,14 +168,13 @@ nav a:hover {
 }
 
 .card img {
-  width: 100%;        
-  height: 180px;      
-  object-fit: cover;  
-  border-radius: 12px; 
-  margin-bottom: 15px; 
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
   transition: transform 0.3s ease;
 }
-
 
 .card:hover img {
   transform: scale(1.05);
@@ -219,6 +210,9 @@ nav a:hover {
   box-shadow: 0 0 15px #00c6ff;
 }
 
+/* ======================================
+   FOOTER
+====================================== */
 .footer {
   background-color: #0b1320;
   padding: 60px 10% 30px;
@@ -253,4 +247,178 @@ nav a:hover {
   text-align: center;
   color: #666;
   font-size: 0.85rem;
+}
+
+/* ======================================
+   CART MODAL
+====================================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #0b1320;
+  border: 2px solid #00c6ff;
+  border-radius: 15px;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 380px;
+  box-shadow: 0 0 30px rgba(0, 198, 255, 0.5);
+  animation: modalopen 0.3s forwards;
+}
+
+@keyframes modalopen {
+  from {opacity: 0; transform: translateX(100%);}
+  to {opacity: 1; transform: translateX(0);}
+}
+
+.close-btn {
+  color: #00c6ff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.modal-content h2 {
+  color: #00c6ff;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+.cart-items-list {
+  max-height: 250px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding-right: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed #162233;
+}
+
+.cart-item-info {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.cart-item-info h5 {
+  color: #fff;
+  margin: 0;
+}
+
+.cart-item-info span {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+}
+
+.remove-btn {
+  background: transparent;
+  border: 1px solid #ff3366;
+  color: #ff3366;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-left: 10px;
+}
+
+.remove-btn:hover {
+  background-color: #ff3366;
+  color: #0b1320;
+  box-shadow: 0 0 5px #ff3366;
+}
+
+.cart-item-price {
+  color: #00c6ff;
+  font-weight: bold;
+  font-size: 1rem;
+  min-width: 70px;
+  text-align: right;
+}
+
+.empty-cart-message {
+  color: #aaa;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.cart-summary {
+  border-top: 2px solid #00c6ff;
+  padding-top: 15px;
+  text-align: right;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cart-total h4 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+#cart-total-price {
+  color: #00f2ff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#checkout-btn {
+  padding: 10px 20px;
+  margin: 0;
+  font-size: 1rem;
+}
+
+#checkout-btn:disabled {
+  background-color: #333;
+  color: #777;
+  border-color: #555;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+@media (max-width: 600px) {
+  .modal-content {
+    max-width: 90%;
+    right: 5%;
+    left: 5%;
+  }
 }

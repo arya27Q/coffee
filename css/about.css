@@ -117,7 +117,7 @@ nav a:hover, nav a.active {
   transform: scale(1.05);
 }
 
-/* VISION SECTION */
+
 .vision {
   text-align: center;
   padding: 60px 10%;
@@ -138,7 +138,56 @@ nav a:hover, nav a.active {
   line-height: 1.6;
 }
 
-/* FOOTER */
+.our-values {
+
+  text-align: center;
+  padding: 80px 10%; 
+  background-color: #0b1320; 
+}
+.our-values .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-values h2 {
+    color: #00c6ff;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.values-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    gap: 30px;
+
+}
+
+.value-item {
+    background-color: #162233;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 198, 255, 0.3);
+}
+
+.value-item i {
+    color: #00c6ff;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.value-item h4 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.value-item p {
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+
 .footer {
   background-color: #0b1320;
   padding: 60px 10% 30px;
