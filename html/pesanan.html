@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daftar Pesanan - Forever Cop %</title>
+  <title>Daftar Pesanan - Forever Coffee %</title>
   <link rel="stylesheet" href="/css/pesanan.css">
   </head>
 <body>
   <header class="navbar">
     <div class="container">
-      <div class="logo">☕ Forever Cop %</div>
+      <div class="logo">☕ Forever Coffee %</div>
       <nav>
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
@@ -35,11 +35,10 @@
   </section>
 
   <footer class="footer">
-    <p class="copy">© 2024 Forever Cop %. All rights reserved.</p>
+    <p class="copy">© 2025 Forever Coffee %. </p>
   </footer>
 
 <script>
-// Fungsi untuk memformat angka menjadi format Rupiah
 const formatRupiah = (number) => {
     return new Intl.NumberFormat('id-ID', {
         style: 'currency',
@@ -48,13 +47,12 @@ const formatRupiah = (number) => {
     }).format(number);
 };
 
-// Ambil elemen DOM
 let orders = JSON.parse(localStorage.getItem('orders')) || [];
 const orderList = document.getElementById('order-list');
 const totalPriceDiv = document.getElementById('total-price');
 
 function renderOrders() {
-  // Kosongkan daftar sebelum merender ulang
+ 
   orderList.innerHTML = ""; 
   
   if (orders.length === 0) {
@@ -66,11 +64,11 @@ function renderOrders() {
   let total = 0;
   
   orders.forEach(item => {
-    // Hitung subtotal untuk item ini
+    
     const itemTotal = item.price * item.quantity;
-    total += itemTotal; // Tambahkan ke total keseluruhan
+    total += itemTotal;
 
-    // Buat elemen <li> baru untuk setiap item
+   
     const listItem = document.createElement('li');
     listItem.innerHTML = `
       <span>${item.name}</span>
@@ -80,7 +78,7 @@ function renderOrders() {
     orderList.appendChild(listItem);
   });
 
-  // Tampilkan total harga
+
   totalPriceDiv.innerHTML = `
     <h3 class="total-label">Total Keseluruhan:</h3>
     <span class="total-amount">${formatRupiah(total)}</span>
@@ -88,18 +86,17 @@ function renderOrders() {
 }
 
 function clearOrders() {
-  // Konfirmasi sebelum menghapus
+  
   if (!confirm("Apakah Anda yakin ingin mengosongkan semua pesanan?")) {
       return;
   }
   
   localStorage.removeItem('orders');
-  orders = []; // Reset variabel orders
-  renderOrders(); // Render ulang tampilan
+  orders = []; 
+  renderOrders(); 
   alert("Daftar pesanan telah dikosongkan.");
 }
 
-// Render saat pertama kali load
 renderOrders();
 </script>
 

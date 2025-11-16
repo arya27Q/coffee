@@ -103,8 +103,8 @@ nav a:hover {
 }
 
 .hero-img img {
-  width: 220px;
-  border-radius: 50%;
+  width: 350px;
+  border-radius: 70%;
   box-shadow: 0 0 30px rgb(0, 200, 255);
 }
 
